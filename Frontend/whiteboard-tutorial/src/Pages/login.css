@@ -1,0 +1,271 @@
+/* Enhanced Login Page - Modern and Aesthetic Design */
+
+/* Container with enhanced gradient background and animation */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #4776E6, #8E54E9);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Updated login form with elegant styling */
+.login-form {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  animation: formAppear 0.8s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes formAppear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Decorative elements */
+.login-form::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.login-form::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4776E6, #8E54E9);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Enhanced heading with subtle underline */
+.login-form h2 {
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.login-form h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(to right, #4776E6, #8E54E9);
+  border-radius: 3px;
+}
+
+/* Improved form group */
+.form-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Enhanced labels with floating effect */
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+
+/* Input fields with enhanced styling and focus effects */
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  background-color: #f9fafc;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4776E6;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(71, 118, 230, 0.2);
+  transform: translateY(-1px);
+}
+
+.form-group input::placeholder {
+  color: #aab;
+}
+
+/* Button with enhanced gradient and visual effects */
+/* Button with enhanced gradient and visual effects - FIX FOR VISIBLE TEXT */
+button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, #4776E6, #8E54E9);
+  color: rgb(65, 3, 3);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700; /* Increased font weight */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(71, 118, 230, 0.3);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.03em;
+  z-index: 1;
+  margin-top: 0.5rem;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); /* Added text shadow for better visibility */
+}
+
+button span {
+  position: relative;
+  z-index: 2; /* Ensure text is above the pseudo-element */
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: all 0.6s ease;
+  z-index: 0; /* Ensure this is below the text */
+}
+
+button:hover {
+  box-shadow: 0 6px 15px rgba(71, 118, 230, 0.45);
+  transform: translateY(-3px);
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(71, 118, 230, 0.4);
+}
+
+/* Enhanced error message with icon and animation */
+.error-message {
+  color: #842029;
+  background-color: #f8d7da;
+  border-left: 4px solid #dc3545;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(132, 32, 41, 0.1);
+  animation: shake 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+/* Additional links styling if needed */
+.form-links {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.form-links a {
+  color: #4776E6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.form-links a:hover {
+  color: #8E54E9;
+  text-decoration: underline;
+}
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+  .login-form {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .login-form h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.toggle-form {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #4776E6;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0.5rem;
+}
+
+.toggle-button:hover {
+  color: #8E54E9;
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef5350;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #66bb6a;
+}
